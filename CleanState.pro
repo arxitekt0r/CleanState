@@ -1,24 +1,27 @@
 QT       += core gui
-
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
+TEMPLATE = app
+TARGET = CleanState
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+INCLUDEPATH += src
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp
+    src/main.cpp \
+    src/core/ApplicationController.cpp \
+    src/ui/MainWindow.cpp \
+    src/ui/pages/StatusPage.cpp \
+    src/ui/pages/ProtectionPage.cpp \
+    src/ui/pages/LogsPage.cpp \
+    src/ui/pages/SettingsPage.cpp
 
 HEADERS += \
-    mainwindow.h
+    src/core/ApplicationController.h \
+    src/ui/MainWindow.h \
+    src/ui/pages/StatusPage.h \
+    src/ui/pages/ProtectionPage.h \
+    src/ui/pages/LogsPage.h \
+    src/ui/pages/SettingsPage.h
 
-FORMS += \
-    mainwindow.ui
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+FORMS +=
