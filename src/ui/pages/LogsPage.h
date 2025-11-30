@@ -21,6 +21,7 @@ private:
 
     void setupUi();
     void populateDummyLogs();
+    void adjustColumns();   // <- new helper
 };
 
 #endif // LOGSPAGE_H
