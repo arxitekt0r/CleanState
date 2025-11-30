@@ -22,12 +22,15 @@ private slots:
 private:
     QLabel* m_selectedPathLabel = nullptr;
     QLabel* m_currentModeLabel = nullptr;
+    QLabel* m_statusBadgeLabel = nullptr;
+    QLabel* m_targetHintLabel = nullptr;
 
-    bool m_protectionEnabled = false;
+    bool    m_protectionEnabled = false;
     QString m_selectedPath;
 
     void setupUi();
     void updateUi();
+    void updateStatusBadge();
 };
 
 #endif // PROTECTIONPAGE_H
